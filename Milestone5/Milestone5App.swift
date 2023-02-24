@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct Milestone5App: App {
+    @StateObject var dataController = DataController()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(\.managedObjectContext, dataController.container.viewContext)
         }
     }
 }

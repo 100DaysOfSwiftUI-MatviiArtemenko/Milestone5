@@ -8,59 +8,52 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject private var userVM = ViewModel()
-    @State private var showingAddView = false
-    @State private var pickedImage: UIImage?
+    @StateObject var eventVM = EventVM()
+    @StateObject var vm = DataController()
+    @State private var snappedItem = 0.0
+    @State private var draggingItem = 0.0
+    
+    @State private var addEventIsShowing = false
+
     var body: some View {
-        VStack {
+        NavigationView {
             ZStack {
-                Color(red: 0.35, green: 0.4, blue: 0.5)
-                    
-                    
-                if userVM.users.isEmpty {
+                AngularGradient(colors: [.orange, .indigo, .black, .orange, .mint].shuffled(), center: .leading)
+                    .grayscale(0.55) // can play with colors later
+                    .ignoresSafeArea()
+                    .scaleEffect(1.4)
+                // if there are no events --> show "addNewEventView" else show "CarouselView"
+                
+                if eventVM.items.isEmpty {
                     VStack {
-                      Image(systemName: "plus")
-                            .resizable()
-                            .scaledToFit()
-                            .foregroundColor(.white)
-                            .padding()
-                            .frame(width: 90)
-                            .background(Color(red: 0.35, green: 0.6, blue: 0.7, opacity: 0.7))
-                            .clipShape(Circle())
-                            .onTapGesture {
-                                showingAddView = true
-                            }
-                        Text("Add new contact")
-                            .font(.system(size: 20, weight: .bold, design: .rounded))
-                    }
-                    .padding()
-                    .frame(width: 200, height: 250)
-                    .background(.regularMaterial)
-                    .cornerRadius(15)
-                    .sheet(isPresented: $showingAddView) {
-                        AddContactView(userVM: userVM)
-                    }
-                    
-                } else {
-                    List {
-                        ForEach(userVM.users) { user in
-                            HStack {
-                                VStack {
-                                    Text(user.firstName)
-                                        .font(.headline)
-                                    Text(user.lastName)
-                                        .font(.subheadline)
-                                    
-                                }
-                                Text(String(user.age))
-                                    .font(.headline)
-                            }
+                        Button {
+                            addEventIsShowing = true
+                        } label: {
+                            Image("plus.app.fill")
+                                .font(.system(size: 50))
+                                .padding()
+                                .background(.thinMaterial)
+                                .cornerRadius(18)
                         }
+                       
                     }
+                } else {
+                    
+                    CarouselView(carousel: eventVM)
                 }
             }
+            
         }
-        .padding()
+        .sheet(isPresented: $addEventIsShowing) { AddEventView(eventVM: eventVM) }
+        .navigationTitle(Text("new name"))
+    }
+    
+    func distance(_ item: Int) -> Double {
+        return (draggingItem - Double(item)).remainder(dividingBy: Double(eventVM.items.count))
+    }
+    func myXOffset(_ item: Int) -> Double {
+        let angle = Double.pi * 2/Double(eventVM.items.count) * (distance(item))
+        return sin(angle) * 200
     }
 }
 
