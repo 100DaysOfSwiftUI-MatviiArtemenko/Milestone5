@@ -21,6 +21,9 @@ class DataController: ObservableObject {
             self.container.viewContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         }
         fetchCoreData()
+//        for item in savedEvents {
+//            savedEvents.removeFirst()
+//        }
         
     }
     func fetchCoreData() {

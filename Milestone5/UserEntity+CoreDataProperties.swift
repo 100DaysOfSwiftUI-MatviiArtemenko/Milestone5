@@ -22,6 +22,27 @@ extension UserEntity {
     @NSManaged public var role: String?
     @NSManaged public var about: String?
     @NSManaged public var eventRelation: NSSet?
+    
+    public var wrappedName: String {
+        name ?? "Unknown name"
+    }
+    public var wrappedRole: String {
+        role ?? "Unknown role"
+    }
+    public var wrappedAbout: String {
+        about ?? "Unknown about"
+    }
+    private var wrappedID: UUID {
+        id ?? UUID()
+    }
+    
+    public var eventArray: [EventEntity] {
+        let set = eventRelation as? Set<EventEntity> ?? []
+            
+        return set.sorted{ $0.wrappedType < $1.wrappedType }
+        
+    }
+
 
 }
 

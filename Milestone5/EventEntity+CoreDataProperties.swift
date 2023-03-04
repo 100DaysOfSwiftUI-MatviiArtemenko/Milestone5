@@ -24,6 +24,29 @@ extension EventEntity {
     @NSManaged public var address: String?
     @NSManaged public var type: String?
     @NSManaged public var userRelation: UserEntity?
+    
+    public var wrappedTitle: String {
+        title ?? "Unknown title"
+    }
+    
+    public var wrappedDescription: String {
+        eventDescription ?? "blank description"
+    }
+
+    public var wrappedPeopleRegistered: Int {
+        Int(peopleRegistered) ?? 0
+    }
+    
+    public var wrappedAddress: String {
+        address ?? "Unknown address"
+    }
+    
+    public var wrappedType: String {
+        type ?? "Unknown type"
+    }
+
+
+
 
 }
 

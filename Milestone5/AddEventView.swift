@@ -10,6 +10,7 @@ import SwiftUI
 struct AddEventView: View {
     @Environment(\.managedObjectContext) var moc
     @ObservedObject var eventVM: EventVM
+    @ObservedObject var vm: DataController
     @State private var eventTitle = ""
     @State private var eventDescription = ""
 
@@ -38,6 +39,7 @@ struct AddEventView: View {
             
             Button {
                 let newEvent = EventEntity(context: moc)
+                newEvent.id = UUID()
                 newEvent.title = eventTitle
                 newEvent.eventDescription = eventDescription
                 
@@ -58,6 +60,6 @@ struct AddEventView: View {
 
 struct EventView_Previews: PreviewProvider {
     static var previews: some View {
-        AddEventView(eventVM: EventVM())
+        AddEventView(eventVM: EventVM(), vm: DataController())
     }
 }

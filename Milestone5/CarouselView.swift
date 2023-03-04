@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import CoreData
 
 struct EventItem: Identifiable, Hashable {
     var id: UUID
@@ -44,41 +45,38 @@ struct CarouselView: View {
                             VStack {
                                 RoundedRectangle(cornerRadius: 15)
                                     .frame(width: 300, height: 500)
-                                    .background(.ultraThinMaterial)
+                                    .background(.regularMaterial)
                                     .opacity(0.15)
                                     .cornerRadius(15)
                                 
                                     .overlay(alignment: .top) {
                                         RoundedRectangle(cornerRadius: 15)
-                                            .fill(.regularMaterial)
+                                            .fill(.teal)
                                             .frame(width: 300, height: 375)
                                         
-                                        Text(item.title)
+                                        Text(item.wrappedTitle)
                                             .bold()
                                             .padding()
                                         
                                     }
                                     .overlay(alignment: .bottom) {
-                                        Text("Description text goes here.")
+                                        Text(item.wrappedDescription)
                                             .font(.caption)
                                             .frame(width: 220)
                                             .padding()
                                             .background(.regularMaterial)
                                             .cornerRadius(15)
                                             .padding()
-                                        
                                     }
                             }
                         }
                         Spacer()
                     }
-                    
-                    
-                    .scaleEffect(1.0 - abs(distance(Int(indexOfEvent(carousel.items, item)))) * 0.2)
-                    .opacity(1.0 - abs(indexOfEvent(carousel.items, item)) * 0.3)
-                    .blur(radius: abs(indexOfEvent(carousel.items, item)) * 1.0)
-                    .offset(x: myXOffset(Int(indexOfEvent(carousel.items, item))), y: 0)
-                    .zIndex(1.0 - abs(indexOfEvent(carousel.items, item)) * 0.1)
+                    .scaleEffect(1.0 - abs(distance(Int(indexOfEvent(vm.savedEvents, item)))) * 0.2)
+                    .opacity(1.0 - abs(indexOfEvent(vm.savedEvents, item)) * 0.3)
+                    .blur(radius: abs(indexOfEvent(vm.savedEvents, item)) * 1.0)
+                    .offset(x: myXOffset(Int(indexOfEvent(vm.savedEvents, item))), y: 0)
+                    .zIndex(1.0 - abs(indexOfEvent(vm.savedEvents, item)) * 0.1)
                 }
             }
             .gesture(
@@ -96,6 +94,13 @@ struct CarouselView: View {
                         }
                         
                     })  )
+            VStack {
+                NavigationLink {
+                    AddEventView(eventVM: carousel, vm: vm)
+                } label: {
+                    Text("Add new event.")
+                }
+            }
         }
         .navigationBarHidden(true)
     }
@@ -106,7 +111,7 @@ struct CarouselView: View {
         let angle = Double.pi * 2/Double(carousel.items.count) * (distance(item))
         return sin(angle) * 200
     }
-    func indexOfEvent(_ items: [EventItem], _ item: EventItem) -> Double {
+    func indexOfEvent(_ items: [EventEntity], _ item: EventEntity) -> Double {
         var itemIndex = 0.0
         if let index = items.firstIndex(of: item) {
             itemIndex = Double(index)

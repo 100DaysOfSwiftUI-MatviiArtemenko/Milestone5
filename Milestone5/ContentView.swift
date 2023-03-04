@@ -6,8 +6,10 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct ContentView: View {
+    @Environment(\.managedObjectContext) var moc
     @StateObject var eventVM = EventVM()
     @StateObject var vm = DataController()
     @State private var snappedItem = 0.0
@@ -18,13 +20,13 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                AngularGradient(colors: [.orange, .indigo, .black, .orange, .mint].shuffled(), center: .leading)
+                AngularGradient(colors: [.orange, .indigo, .black, .orange, .mint], center: .leading)
                     .grayscale(0.55) // can play with colors later
                     .ignoresSafeArea()
                     .scaleEffect(1.4)
                 // if there are no events --> show "addNewEventView" else show "CarouselView"
                 
-                if eventVM.items.isEmpty {
+                if vm.savedEvents.isEmpty {
                     VStack {
                         Button {
                             addEventIsShowing = true
@@ -38,13 +40,18 @@ struct ContentView: View {
                        
                     }
                 } else {
-                    
-                    CarouselView(carousel: eventVM)
+                
+                    CarouselView(vm: vm, carousel: eventVM)
                 }
             }
             
         }
-        .sheet(isPresented: $addEventIsShowing) { AddEventView(eventVM: eventVM) }
+        .onAppear {
+            for event in vm.savedEvents {
+                print(event.id ?? "not found")
+            }
+        }
+        .sheet(isPresented: $addEventIsShowing) { AddEventView(eventVM: eventVM, vm: vm) }
         .navigationTitle(Text("new name"))
     }
     
