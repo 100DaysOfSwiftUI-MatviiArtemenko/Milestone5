@@ -1,14 +1,14 @@
 //
-//  Milestone5App.swift
-//  Milestone5
+//  TestingAppApp.swift
+//  TestingApp
 //
-//  Created by admin on 20.09.2022.
+//  Created by admin on 25/02/2023.
 //
 
 import SwiftUI
 
 @main
-struct Milestone5App: App {
+struct Milestone5: App {
     @StateObject var dataController = DataController()
     var body: some Scene {
         WindowGroup {

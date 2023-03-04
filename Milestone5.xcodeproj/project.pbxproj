@@ -7,26 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8443B55628DA333500781AEE /* Milestone5App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443B55528DA333500781AEE /* Milestone5App.swift */; };
-		8443B55828DA333500781AEE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443B55728DA333500781AEE /* ContentView.swift */; };
+		84386FE229B294F80047A206 /* TestingAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84386FD429B294F70047A206 /* TestingAppApp.swift */; };
+		84386FE329B294F80047A206 /* SubscribeUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84386FD529B294F70047A206 /* SubscribeUserView.swift */; };
+		84386FE429B294F80047A206 /* EventEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84386FD629B294F70047A206 /* EventEntity+CoreDataClass.swift */; };
+		84386FE529B294F80047A206 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84386FD729B294F70047A206 /* CarouselView.swift */; };
+		84386FE629B294F80047A206 /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84386FD829B294F70047A206 /* ImageSaver.swift */; };
+		84386FE729B294F80047A206 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84386FD929B294F70047A206 /* ImagePicker.swift */; };
+		84386FE829B294F80047A206 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84386FDA29B294F70047A206 /* ContentView.swift */; };
+		84386FE929B294F80047A206 /* UserEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84386FDB29B294F70047A206 /* UserEntity+CoreDataProperties.swift */; };
+		84386FEA29B294F80047A206 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84386FDC29B294F70047A206 /* DataController.swift */; };
+		84386FEB29B294F80047A206 /* AddEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84386FDD29B294F80047A206 /* AddEventView.swift */; };
+		84386FEC29B294F80047A206 /* EventEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84386FDE29B294F80047A206 /* EventEntity+CoreDataProperties.swift */; };
+		84386FED29B294F80047A206 /* UserEventModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84386FDF29B294F80047A206 /* UserEventModel.xcdatamodeld */; };
+		84386FEE29B294F80047A206 /* UserEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84386FE129B294F80047A206 /* UserEntity+CoreDataClass.swift */; };
 		8443B55A28DA333700781AEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8443B55928DA333700781AEE /* Assets.xcassets */; };
 		8443B55D28DA333700781AEE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8443B55C28DA333700781AEE /* Preview Assets.xcassets */; };
-		8443B56428DA354400781AEE /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443B56328DA354400781AEE /* ImagePicker.swift */; };
-		8443B56628DA35B000781AEE /* User-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443B56528DA35B000781AEE /* User-ViewModel.swift */; };
-		8443B56828DA3A3900781AEE /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443B56728DA3A3900781AEE /* ImageSaver.swift */; };
-		8443B56A28DA463100781AEE /* AddContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443B56928DA463000781AEE /* AddContactView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		84386FD329B294F70047A206 /* Milestone5-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Milestone5-Bridging-Header.h"; sourceTree = "<group>"; };
+		84386FD429B294F70047A206 /* TestingAppApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestingAppApp.swift; sourceTree = "<group>"; };
+		84386FD529B294F70047A206 /* SubscribeUserView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscribeUserView.swift; sourceTree = "<group>"; };
+		84386FD629B294F70047A206 /* EventEntity+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "EventEntity+CoreDataClass.swift"; path = "../../TestingApp/EventEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		84386FD729B294F70047A206 /* CarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarouselView.swift; path = ../../TestingApp/TestingApp/CarouselView.swift; sourceTree = "<group>"; };
+		84386FD829B294F70047A206 /* ImageSaver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageSaver.swift; path = ../../Project13_InstaFilter/Project13_InstaFilter/ImageSaver.swift; sourceTree = "<group>"; };
+		84386FD929B294F70047A206 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImagePicker.swift; path = ../../Project13_InstaFilter/Project13_InstaFilter/ImagePicker.swift; sourceTree = "<group>"; };
+		84386FDA29B294F70047A206 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = ../../TestingApp/TestingApp/ContentView.swift; sourceTree = "<group>"; };
+		84386FDB29B294F70047A206 /* UserEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UserEntity+CoreDataProperties.swift"; path = "../../TestingApp/UserEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		84386FDC29B294F70047A206 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataController.swift; path = ../../TestingApp/TestingApp/DataController.swift; sourceTree = "<group>"; };
+		84386FDD29B294F80047A206 /* AddEventView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddEventView.swift; path = ../../TestingApp/TestingApp/AddEventView.swift; sourceTree = "<group>"; };
+		84386FDE29B294F80047A206 /* EventEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "EventEntity+CoreDataProperties.swift"; path = "../../TestingApp/EventEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		84386FE029B294F80047A206 /* UserEventModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserEventModel.xcdatamodel; sourceTree = "<group>"; };
+		84386FE129B294F80047A206 /* UserEntity+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UserEntity+CoreDataClass.swift"; path = "../../TestingApp/UserEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		8443B55228DA333500781AEE /* Milestone5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Milestone5.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8443B55528DA333500781AEE /* Milestone5App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Milestone5App.swift; sourceTree = "<group>"; };
-		8443B55728DA333500781AEE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8443B55928DA333700781AEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8443B55C28DA333700781AEE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		8443B56328DA354400781AEE /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
-		8443B56528DA35B000781AEE /* User-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User-ViewModel.swift"; sourceTree = "<group>"; };
-		8443B56728DA3A3900781AEE /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
-		8443B56928DA463000781AEE /* AddContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,14 +74,22 @@
 		8443B55428DA333500781AEE /* Milestone5 */ = {
 			isa = PBXGroup;
 			children = (
-				8443B55528DA333500781AEE /* Milestone5App.swift */,
-				8443B55728DA333500781AEE /* ContentView.swift */,
-				8443B56928DA463000781AEE /* AddContactView.swift */,
-				8443B56528DA35B000781AEE /* User-ViewModel.swift */,
-				8443B56328DA354400781AEE /* ImagePicker.swift */,
-				8443B56728DA3A3900781AEE /* ImageSaver.swift */,
+				84386FDD29B294F80047A206 /* AddEventView.swift */,
+				84386FD729B294F70047A206 /* CarouselView.swift */,
+				84386FDA29B294F70047A206 /* ContentView.swift */,
+				84386FDC29B294F70047A206 /* DataController.swift */,
+				84386FD929B294F70047A206 /* ImagePicker.swift */,
+				84386FD829B294F70047A206 /* ImageSaver.swift */,
+				84386FD529B294F70047A206 /* SubscribeUserView.swift */,
+				84386FD429B294F70047A206 /* TestingAppApp.swift */,
+				84386FD629B294F70047A206 /* EventEntity+CoreDataClass.swift */,
+				84386FDE29B294F80047A206 /* EventEntity+CoreDataProperties.swift */,
+				84386FE129B294F80047A206 /* UserEntity+CoreDataClass.swift */,
+				84386FDB29B294F70047A206 /* UserEntity+CoreDataProperties.swift */,
+				84386FDF29B294F80047A206 /* UserEventModel.xcdatamodeld */,
 				8443B55928DA333700781AEE /* Assets.xcassets */,
 				8443B55B28DA333700781AEE /* Preview Content */,
+				84386FD329B294F70047A206 /* Milestone5-Bridging-Header.h */,
 			);
 			path = Milestone5;
 			sourceTree = "<group>";
@@ -111,6 +134,7 @@
 				TargetAttributes = {
 					8443B55128DA333500781AEE = {
 						CreatedOnToolsVersion = 14.0;
+						LastSwiftMigration = 1420;
 					};
 				};
 			};
@@ -149,12 +173,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8443B56428DA354400781AEE /* ImagePicker.swift in Sources */,
-				8443B55828DA333500781AEE /* ContentView.swift in Sources */,
-				8443B56828DA3A3900781AEE /* ImageSaver.swift in Sources */,
-				8443B56A28DA463100781AEE /* AddContactView.swift in Sources */,
-				8443B55628DA333500781AEE /* Milestone5App.swift in Sources */,
-				8443B56628DA35B000781AEE /* User-ViewModel.swift in Sources */,
+				84386FE329B294F80047A206 /* SubscribeUserView.swift in Sources */,
+				84386FE229B294F80047A206 /* TestingAppApp.swift in Sources */,
+				84386FE829B294F80047A206 /* ContentView.swift in Sources */,
+				84386FE629B294F80047A206 /* ImageSaver.swift in Sources */,
+				84386FEA29B294F80047A206 /* DataController.swift in Sources */,
+				84386FEB29B294F80047A206 /* AddEventView.swift in Sources */,
+				84386FE729B294F80047A206 /* ImagePicker.swift in Sources */,
+				84386FE929B294F80047A206 /* UserEntity+CoreDataProperties.swift in Sources */,
+				84386FE529B294F80047A206 /* CarouselView.swift in Sources */,
+				84386FED29B294F80047A206 /* UserEventModel.xcdatamodeld in Sources */,
+				84386FEC29B294F80047A206 /* EventEntity+CoreDataProperties.swift in Sources */,
+				84386FEE29B294F80047A206 /* UserEntity+CoreDataClass.swift in Sources */,
+				84386FE429B294F80047A206 /* EventEntity+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +311,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Milestone5/Preview Content\"";
@@ -299,6 +331,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = matvii.Milestone5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Milestone5/Milestone5-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -309,6 +343,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Milestone5/Preview Content\"";
@@ -328,6 +363,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = matvii.Milestone5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Milestone5/Milestone5-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -355,6 +391,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		84386FDF29B294F80047A206 /* UserEventModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				84386FE029B294F80047A206 /* UserEventModel.xcdatamodel */,
+			);
+			currentVersion = 84386FE029B294F80047A206 /* UserEventModel.xcdatamodel */;
+			path = UserEventModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8443B54A28DA333500781AEE /* Project object */;
 }
