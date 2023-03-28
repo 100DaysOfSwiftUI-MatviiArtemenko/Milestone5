@@ -24,7 +24,6 @@ struct SubscribeUserView: View {
     @State private var saveImage: Data?
     @State private var showingImagePicker = false
     var body: some View {
-        
         NavigationView {
             ZStack {
                 AngularGradient(colors: [.yellow, .brown.opacity(0.7), .red], center: .trailing)
@@ -39,13 +38,14 @@ struct SubscribeUserView: View {
                 
                 VStack {
                     // MARK: image adding section ->
+
                     image?
                         .resizable()
                         .frame(width: 320, height: 300)
                         .scaledToFill()
                         .padding()
                         .padding(.top)
-                        .onAppear {savedImage()}
+                        .onAppear { savedImage() }
                         .cornerRadius(16)
 
                     Button {
@@ -58,13 +58,14 @@ struct SubscribeUserView: View {
                     .background(.thinMaterial)
                     .cornerRadius(14)
                     .padding(.vertical)
-                    //MARK: <-
+
+                    // MARK: <-
                     
                     Group {
                         TextField("Enter your name", text: $userName)
                         
                         Picker("Select your age...", selection: $userAge) {
-                            ForEach(1..<100, id: \.self) {
+                            ForEach(1 ..< 100, id: \.self) {
                                 Text("\($0)")
                             }
                         }
@@ -105,34 +106,34 @@ struct SubscribeUserView: View {
                     .background(.regularMaterial)
                     .cornerRadius(14)
                     .disabled(isValid())
-                    
                 }
             }
-            
         }
         .sheet(isPresented: $showingImagePicker) { ImagePicker(image: $inputImage) }
         .onChange(of: inputImage) { _ in loadImage() }
-        
     }
     
     func loadImage() {
-        guard let inputImage = inputImage else { return }
+        guard let inputImage = inputImage else {
+            return
+        }
         image = Image(uiImage: inputImage)
     }
     
     func savedImage() {
-        guard let inputImage = inputImage else { return }
+        guard let inputImage = inputImage else {
+            return
+        }
         saveImage = inputImage.jpegData(compressionQuality: 1.0)
     }
     
     func isValid() -> Bool {
         if userName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty ||
-            userRole.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            userRole.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+        {
             return true
         } else {
             return false
         }
     }
 }
-
-
