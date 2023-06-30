@@ -26,8 +26,22 @@ From *[100DaysOfSwiftUI :](https://www.hackingwithswift.com/100/swiftui "Hacking
 ---
 ## &nbsp; 📲 Screenshoot
 
-🚧 *In progress* 👨🏼‍💻 🚧
+<p align="center">
+  <img 
+  width = 250
+    src="1.png"
+  >
+  <img 
+  width = 250
+    src="2.png"
+  >
+  <img 
+  width = 250
+    src="3.png"
+  >
+</p>
 
+##### [Make your own screenshots on screenshots.pro](https://screenshots.pro) 
 ---
 ##  &nbsp; 🔍 &nbsp; Resources 
 

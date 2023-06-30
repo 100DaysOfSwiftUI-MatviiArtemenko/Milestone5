@@ -27,7 +27,7 @@ struct SubscribeUserView: View {
         NavigationView {
             ZStack {
                 AngularGradient(colors: [.yellow, .brown.opacity(0.7), .red], center: .trailing)
-                    .grayscale(0.45) // can play with colors later
+                    .grayscale(0.45)
                     .ignoresSafeArea()
                     .scaleEffect(1.4)
                     .blur(radius: 10)
@@ -51,7 +51,11 @@ struct SubscribeUserView: View {
                     Button {
                         showingImagePicker = true
                     } label: {
-                        Image(systemName: "photo.fill")
+                        Label {
+                            Text("pick image")
+                        } icon: {
+                            Image(systemName: "photo.fill")
+                        }
                     }
                     .foregroundColor(.secondary)
                     .padding()
@@ -93,7 +97,8 @@ struct SubscribeUserView: View {
                         newUser.age = Int16(userAge)
                         newUser.name = userName
                         newUser.userId = UUID()
-                        newUser.addToEvents(currentEvent)
+                        // newUser.addToEvents(currentEvent)
+                        currentEvent.amountOfPeople += 1
                         try? moc.save()
                         dismiss()
                         
