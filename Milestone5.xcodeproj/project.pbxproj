@@ -74,14 +74,14 @@
 		8443B55428DA333500781AEE /* Milestone5 */ = {
 			isa = PBXGroup;
 			children = (
-				84386FDD29B294F80047A206 /* AddEventView.swift */,
-				84386FD729B294F70047A206 /* CarouselView.swift */,
+				84386FD429B294F70047A206 /* TestingAppApp.swift */,
 				84386FDA29B294F70047A206 /* ContentView.swift */,
-				84386FDC29B294F70047A206 /* DataController.swift */,
 				84386FD929B294F70047A206 /* ImagePicker.swift */,
 				84386FD829B294F70047A206 /* ImageSaver.swift */,
+				84386FD729B294F70047A206 /* CarouselView.swift */,
+				84386FDD29B294F80047A206 /* AddEventView.swift */,
 				84386FD529B294F70047A206 /* SubscribeUserView.swift */,
-				84386FD429B294F70047A206 /* TestingAppApp.swift */,
+				84386FDC29B294F70047A206 /* DataController.swift */,
 				84386FD629B294F70047A206 /* EventEntity+CoreDataClass.swift */,
 				84386FDE29B294F80047A206 /* EventEntity+CoreDataProperties.swift */,
 				84386FE129B294F80047A206 /* UserEntity+CoreDataClass.swift */,
